@@ -151,12 +151,24 @@ Styles for newteam webpage
 }
 
 .submitCont {
-    margin: 3% auto;
+    background: transparent;
+    border: solid #000000;
+    border-radius: 4px;
+    font-size: 20px;
+    margin: 2% auto;
+    padding: 2% 5%;
+    text-transform: uppercase;
 }
 
-.returnButtons {
-    margin: 1% auto;
+#addTeam {
+    margin: 3% auto 0;
 }
+
+.returnButtons a {
+    margin: .5% 2%;
+}
+
+
 
 /*
 ------------------------------------------
@@ -204,7 +216,7 @@ Styles for teams'sites
 }
 
 .deleted, .register, .logout {
-    margin: 25% auto;
+    margin: 20% auto;
     font-size: 36px;
 }
 
