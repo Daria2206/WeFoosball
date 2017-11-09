@@ -1,0 +1,284 @@
+/*
+========================================
+Custom styles
+========================================
+*/
+
+/*
+------------------------------------------
+Basic styles
+------------------------------------------
+*/
+
+body {
+    color: #000000;
+    font-family: 'Oswald', sans-serif;
+}
+
+h1, h3 {
+    text-transform: uppercase;
+}
+
+a, a:hover, a:active, a:visited, a:link { 
+    color: #000000;
+    text-decoration: none;
+    background: transparent;
+    border: solid #000000;
+    border-radius: 4px;
+    display: inline-block;
+    font-size: 20px;
+    margin: 5% 1%;
+    padding: 1% 3%;
+    text-transform: uppercase;
+}
+
+table {
+    margin: 2% auto 7%;
+    border-collapse: collapse;
+    width: 50%;
+}
+
+td, th {
+    border: 1px solid #ddd;
+    padding: 8px;
+}
+
+tr:nth-child(odd) {
+    background-color: #f2f2f2;
+}
+
+tr:hover {
+    background-color: #ddd;
+}
+
+th {
+    padding-top: 12px;
+    padding-bottom: 12px;
+    text-align: left;
+    background-color: #f2f2f2;
+    color: #000000;
+}
+
+p {
+    margin: 1%;
+}
+
+.message {
+    color: #DF0101;
+}
+
+/*
+------------------------------------------
+Home page styles
+------------------------------------------
+*/
+
+body.home {
+    background: #000000 url('foosball1920.jpg') no-repeat fixed center center;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    color: #FFFFFF;
+}
+
+.homeMain {
+    margin: 40% 2%;
+    text-transform: uppercase;
+}
+
+.homeMain h1 {
+    font-size: 70px;
+}
+
+.homeMain h2 {
+    margin: 5% 1%;
+    text-transform: capitalize;
+}
+
+
+.homeMain a {
+    background: #FA58AC;
+    border: none;
+    color: #FFFFFF;
+    display: inline-block;
+}
+
+/*
+------------------------------------------
+Teams page styles
+------------------------------------------
+*/
+
+
+.teams {
+    font-size: 20px;
+    margin: 10% 1%;
+}
+
+blockquote p {
+    font-family: 'Homemade Apple', cursive;
+    font-size: 40px;
+}
+
+a.teams {
+    color: #04B45F;
+    border: none;
+}
+
+/*
+------------------------------------------
+Styles for newteam webpage
+------------------------------------------
+*/
+
+.newteam {
+    font-size: 22px;
+    margin: 10% auto;
+}
+
+.instructions {
+    max-width: 500px;
+    margin: 3% auto;
+}
+.inpField {
+    display: inline-block;
+}
+
+.teamForm {
+    margin: 2% auto;
+    max-width: 500px;
+}
+
+.submitCont {
+    margin: 3% auto;
+}
+
+.returnButtons {
+    margin: 1% auto;
+}
+
+/*
+------------------------------------------
+Styles for double.html
+------------------------------------------
+*/
+.double {
+    margin: 20% auto;
+}
+
+.double p {
+    font-size: 24px;
+    text-transform: uppercase;
+}
+
+.double p:first-child {
+    color: #DF0101;
+    font-size: 45px;
+    text-transform: uppercase;
+} 
+
+/*
+------------------------------------------
+Styles for teams'sites
+------------------------------------------
+*/
+
+.singleTeam {
+    font-size: 22px;
+    margin: 10% auto;
+}
+
+.singleTeam h1 {
+    font-size: 45px;
+    margin: 10% auto 3%;
+}
+
+.singleTeam h2 {
+    margin: 5% auto 2%;
+    text-transform: uppercase;
+}
+
+.singleTeam p {
+    font-size: 30px;
+}
+
+.deleted, .register, .logout {
+    margin: 25% auto;
+    font-size: 36px;
+}
+
+/*
+------------------------------------------
+Small devices
+------------------------------------------
+*/
+
+@media (max-width: 550px) {
+    .homeMain {
+        margin: 50% .5%;
+    }
+
+    .homeMain h1 {
+        font-size: 50px;
+        margin: 5% .5%;
+    }
+
+    .homeMain h2 {
+        font-size: 20px;
+        margin: 5% .5%;  
+    }
+    .homeMain a {
+        font-size: 18px;
+    }
+}
+
+/*
+------------------------------------------
+Tablet styles
+------------------------------------------
+*/
+
+@media (min-width: 768px) and (max-width: 991px) {
+    .homeMain {
+        margin: 25% 2%;
+    }
+
+    .homeMain h1 {
+        font-size: 100px;
+        margin: 2%;
+    }
+
+    .homeMain h2 {
+        font-size: 40px;
+        margin: 2%;  
+    }
+    .homeMain a {
+        font-size: 25px;
+    }
+}
+
+/*
+------------------------------------------
+Desktop styles
+------------------------------------------
+*/
+
+@media (min-width: 992px) {
+    .homeMain {
+        margin: 10% 2%;
+    }
+
+    .homeMain h1 {
+        font-size: 120px;
+        margin: 2%;
+    }
+
+    .homeMain h2 {
+        font-size: 50px;
+        margin: 2%;  
+    }
+    .homeMain a {
+        font-size: 25px;
+    }
+}

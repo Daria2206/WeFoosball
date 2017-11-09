@@ -1,0 +1,13 @@
+{% extends "base.html" %}
+{% block title %}Member Already{% endblock %}
+{% block body %}
+  <div class='container'>
+    <div class='double text-center'>
+      <p>You are already member of {{ teamname }}</p>
+      <p class='instructions'>Sorry, but you can be a memember of one team only. Leave your current team
+      to create or join other.</p>
+      <a href='/teams'>Return to Teams</a>
+      <a href="{{url_for('auth.logout')}}">LogOut</a>
+    </div>
+  </div>
+{% endblock %}

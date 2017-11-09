@@ -1,0 +1,14 @@
+{% extends "base.html" %}
+{% block title %}Register{% endblock %}
+{% block body %}
+  <div class='container'>
+    <div class='register text-center'>
+      <h1>We Foosball</h1>
+      <p>To use our service you have to log in with Google.</p>
+      <a href="{{url_for('auth.authorize')}}">Log with Google</a>
+    </div>
+  </div>
+{% endblock %}
+
+
+

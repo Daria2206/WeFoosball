@@ -1,0 +1,19 @@
+{% extends "base.html" %}
+{% block title %}We Foosball App{% endblock %}
+{% block body %}
+  <body class='home'>
+    <div class="container">
+      <div class='homeMain text-center'>
+        <h1>We Foosball</h1>
+        <h2>Find Your Dream Team to Play Foosball</h2>
+        <a href="{{url_for('auth.authorize')}}">Log In with Google</a>
+      </div>
+    </div>
+  </body>
+{% endblock %}
+
+
+
+
+
+ 

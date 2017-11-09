@@ -1,0 +1,13 @@
+{% extends "base.html" %}
+{% block title %}{{ name }}{% endblock %}
+{% block body %}
+  <div class='container'>
+    <div class='deleted text-center'>
+      <p>Last member left {{ name }} - the group has been deleted.</p>
+      <div class='text-center'>
+        <a href='/teams'>Return to Teams</a>
+        <a href="{{url_for('auth.logout')}}">LogOut</a>
+      </div>
+    </div>
+  </div>
+{% endblock %}

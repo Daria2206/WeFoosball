@@ -1,0 +1,50 @@
+{% extends "base.html" %}
+{% block title %}New Team{% endblock %}
+{% block body %}
+  <div class='container'>
+    <div class='newteam'>
+      <h3 class='instructions text-center'>Instructions</h3>
+      <p class='instructions'>To add a new team choose a team name. It may not 
+      be longer than 20 characters. You will be automatically added to your 
+      team as a member. You can be a member of one team only so make wise 
+      choices. Name of a team has to be unique.</p>
+      <form method="POST" class='teamForm'>
+        {{ form.csrf_token }}
+        <div>
+          <div>{{ form.name.label }}</div>
+          <div class='inpField'>{{ form.name() }}</div>
+          <div class='inpField'>
+          {% if form.name.errors %}
+            {% for error in form.name.errors %}
+              {{ error }}
+            {% endfor %}
+          {% endif %}
+          </div>
+        </div>
+        <div>
+          <div>{{ form.city.label }}</div>
+          <div class='inpField'>{{ form.city() }}</div>
+          <div class='inpField'>
+          {% if form.city.errors %}
+            {% for error in form.city.errors %}
+              {{ error }}
+            {% endfor %}
+          {% endif %}
+          </div>
+        </div>
+        {% with messages = get_flashed_messages() %} <!--When the same name used -->
+          {% if messages %} 
+            <p class='message'>{{ messages[-1] }}</p>
+          {% endif %}
+        {% endwith %}
+        <div class=' submitCont text-center'>{{ form.submit(class='submit') }}</div>
+      </form>
+      <div class='returnButtons text-center'>
+        <a href='/teams'>Return to Teams</a>
+        <a href="{{url_for('auth.logout')}}">LogOut</a>
+      </div>
+    </div>
+  </div>
+{% endblock %}
+
+
