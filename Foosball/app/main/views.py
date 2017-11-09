@@ -1,14 +1,14 @@
 """
  We Foosball
     ~~~~~~
-    A mock web application written with Flask + sqlite3 + SQLAlchemy.
+    A simple web application written with Flask + sqlite3 + SQLAlchemy.
     Photo credit: Thomas Serer on Unsplash (https://unsplash.com/photos/r-xKieMqL34)
 
 """
 import os
 from sqlite3 import dbapi2 as sqlite3
 import flask
-from . import main 
+from . import main
 from .. import db
 from ..models import User, Team
 from .forms import NewTeam
@@ -25,7 +25,7 @@ def register():
     return flask.render_template('register.html')
 
 
-@main.route('/teams', methods = ['GET', 'POST']) 
+@main.route('/teams', methods = ['GET', 'POST'])
 def teams():
     if 'credentials' not in flask.session:
       return flask.redirect('register')
@@ -48,7 +48,7 @@ def team(name):
             db.session.commit()
             return flask.render_template('deleted.html', name=name)
         return flask.render_template(
-            'team.html', name=name, team=team_data, members=members, 
+            'team.html', name=name, team=team_data, members=members,
             number = len(members), eligibile=eligibile_member)
     except:
         return flask.redirect('teams')
@@ -106,14 +106,3 @@ def newteam():
     else:
         teamname = Team.query.filter_by(t_id=eligibile_member.team_id).first()
         return flask.render_template('double.html', teamname=teamname.team_name)
-
-
-    
-
-
-
-
-
-
-
-
