@@ -15,5 +15,6 @@ manager.add_command("shell", Shell(make_context=make_shell_context))
 manager.add_command('db', MigrateCommand)
 
 if __name__ == '__main__':
-    os.environ['OAUTHLIB_INSECURE_TRANSPORT'] = '1' #only for testing
+    # This option is enabled for testing only.
+    os.environ['OAUTHLIB_INSECURE_TRANSPORT'] = '1' 
     manager.run()
